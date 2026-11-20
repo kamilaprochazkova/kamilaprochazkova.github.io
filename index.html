@@ -79,5 +79,196 @@
         .section-title {
             font-size: 1.8rem;
             text-transform: uppercase;
-            letter-spacing: 1.
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .section-title span {
+            color: #ff0000;
+        }
+
+        /* HISTORIE STREETDANCE - ČASOVÁ OSA */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid #ff0000;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .timeline-item {
+            background-color: #181818;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 20px 25px;
+            position: relative;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            border-color: #ff0000;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 24px;
+            width: 14px;
+            height: 14px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        .timeline-year {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .timeline-item p {
+            color: #b0b0b0;
+            font-size: 1rem;
+        }
+
+        /* FUN FACTS O DFA BATTLU - MŘÍŽKA */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .fact-card {
+            background-color: #181818;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.15);
+            border-color: #444;
+        }
+
+        .fact-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .fact-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: #ff4d4d;
+        }
+
+        .fact-card p {
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        /* PATIČKA */
+        footer {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        /* ÚPRAVA PRO MOBILY */
+        @media (max-width: 600px) {
+            .hero-card h1 { font-size: 1.7rem; }
+            .hero-card p { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <!-- 1. HLAVNÍ SEKCE S ODKAZEM -->
+        <section class="hero-card">
+            <h1>🔥 DFA Battle 🔥</h1>
+            <p>Zdravím všechny kamarády, běžte se podívat na DFA battle Dogga clan vs. MOGG je to fakt top. cs</p>
+            <a href="https://www.youtube.com/watch?v=RW3VaqCRsdI&list=RDRW3VaqCRsdI&start_radio=1" target="_blank" rel="noopener noreferrer" class="yt-button">
+                ▶ Pustit battle na YouTube
+            </a>
+        </section>
+
+        <!-- 2. HISTORIE STREETDANCE -->
+        <section>
+            <h2 class="section-title">Historie <span>Streetdance</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">70. léta 20. století</span>
+                    <h3>Zrod na ulicích USA</h3>
+                    <p>Streetdance nevznikl v tanečních studiích, ale přímo na ulicích, v klubech a na block parties v New Yorku (Bronx) a Kalifornii. Tanečníci reagovali na novou funkovou a hip-hopovou hudbu a začali tvořit styly jako Breaking, Locking a Popping.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">80. léta 20. století</span>
+                    <h3>Éra MTV a Hip-Hopu</h3>
+                    <p>Díky hudebním videoklipům a filmům (např. Wild Style nebo Beat Street) se pouliční kultura rozšířila do celého světa. Vzniká klasický New York style Hip-Hop a v Chicagu s Detroitem se rodí klubový House dance.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">90. léta – Současnost</span>
+                    <h3>Globální fenomén a světové battly</h3>
+                    <p>Streetdance se dostává na největší světová pódia i do Česka. Zrodily se nové styly jako Krump (plný syrové energie a emocí) a prestižní světové soutěže jako Juste Debout nebo Red Bull BC One, kde rozhoduje čistý freestyle a originalita.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FUN FACTS O DFA BATTLU -->
+        <section>
+            <h2 class="section-title">Fun Facts o <span>DFA Battlu</span></h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <span class="fact-icon">⚡</span>
+                    <h3>100% Improvizace</h3>
+                    <p>Tanečníci v DFA battlu dopředu nevědí, jaký track jim DJ pustí. Musí okamžitě reagovat na beat, změny tempa i nečekané hudební efekty přímo na místě.</p>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-icon">🗣️</span>
+                    <h3>Taneční „Trash Talk“</h3>
+                    <p>V battlu nejde jen o kroky, ale i o postoj a sebevědomí. Tanečníci používají specifická gesta (tzv. burny), kterými dávají soupeři najevo, že ho právě přetancovali – vše ale zůstává v rámci vzájemného respektu.</p>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-icon">🔥</span>
+                    <h3>Energie publika (Hype)</h3>
+                    <p>Kruh (cypher) kolem tanečníků je klíčový. Reakce publika dokáže tanečníky vyhecovat k neuvěřitelným výkonům a často pomáhá naklonit misky vah na stranu vítěze.</p>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-icon">⚔️</span>
+                    <h3>Dogga clan vs. MOGG</h3>
+                    <p>Střet dvou odlišných energií a stylů! Právě kontrast mezi jednotlivými crews dělá tenhle konkrétní DFA battle tak zábavným a napínavým až do posledního vstupu.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Vytvořeno pro fanoušky streetdance a DFA battlů • 2026
+        </footer>
+
+    </div>
+
+</body>
 </html>
